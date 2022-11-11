@@ -1,0 +1,33 @@
+<div>
+    <h1 style="color:blue">Formulario</h1>
+    <h2>{{mensaje}}</h2>
+    <!-- el formulario debe contener un id de angular
+    indicando como valor la directiva ngForm -->
+    <form #userForm="ngForm" (ngSubmit)="recibirDatos()">
+        <label>Nombre:</label><br />
+        <!-- los controles de formulario deben tener un id de angular
+        indicando como valor la directiva ngModel -->
+        <!-- para indicar el modelo del binding se realiza con la siguiente sintaxis 
+        [(ngModel)]="modelo" -->
+        <label style="color:red" *ngIf="cajanombre.valid == false && cajanombre.touched" >Pon el nombre</label>
+        <input type="text" name="cajanombre" #cajanombre="ngModel" [(ngModel)]="user.nombre" required/><br />
+        <label>Apellido:</label><br />
+        <input type="text" name="cajaapelldio" #cajaapellido="ngModel" [(ngModel)]="user.apellido" pattern="[A-Z]{1}[a-z]{2,}"/><br />
+        <label style="color:red;" *ngIf="cajaapellido.valid == false && cajaapellido.touched">El campo apellido debe empezar por Mayuscula y minimo 3 caracteres seguidos</label>
+        <label>Edad:</label><br />
+        <input type="number" name="cajaedad" #cajaedad="ngModel" [(ngModel)]="user.edad" /><br />
+        <button [disabled]="!userForm.valid">Enviar datos</button>
+    </form>
+    <hr />
+    <h2 style="color:rebeccapurple">
+        Nombre: {{user.nombre}}
+    </h2>
+    <h2 style="color:red">
+        Apellido: {{user.apellido}}
+    </h2>
+    <h2 style="color:blue">
+        Edad:{{user.edad}}
+    </h2>
+
+
+</div>
