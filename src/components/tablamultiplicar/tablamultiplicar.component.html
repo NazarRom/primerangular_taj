@@ -1,0 +1,14 @@
+<h1>Tabla Multiplicar</h1>
+<form #multForm="ngForm" (ngSubmit)="multiplicarNumeros()">
+    <label>
+        Inserte un numero
+    </label>
+    <input type="number" name="cajanumero" #cajanumero/>
+    <button>Calcular</button>
+</form>
+<ul>
+    <li *ngFor="let numero of numeros; let i = index">
+        {{num}} * {{i+ 1}} = {{numero}}
+
+    </li>
+</ul>

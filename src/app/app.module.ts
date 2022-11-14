@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 //import { DeportesComponents } from 'src/components/deportes/deportes.component';
 import { FormsModule } from '@angular/forms';
 // import { FormularioBinding } from 'src/components/formulariobinding/formulariobinding.component';
-import { SumarNumeros } from 'src/components/sumarnumeros/sumarnumeros.component';
+// import { SumarNumeros } from 'src/components/sumarnumeros/sumarnumeros.component';
+import { TablaMultiplicar } from 'src/components/tablamultiplicar/tablamultiplicar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +16,8 @@ import { SumarNumeros } from 'src/components/sumarnumeros/sumarnumeros.component
     // HooksAngular,
     //DeportesComponents,
     // FormularioBinding
-    SumarNumeros
+    // SumarNumeros
+    TablaMultiplicar
   ],
   imports: [
     BrowserModule,FormsModule
